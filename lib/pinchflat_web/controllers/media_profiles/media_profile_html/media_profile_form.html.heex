@@ -23,7 +23,13 @@
         type="select"
         x-model="selection"
         inputclass="w-full"
-        help="You can further customize the settings after selecting a preset. This is just a starting point"
+        help={
+          "You can further customize the settings after selecting a preset. This is just a starting point. " <>
+            "Using the Media Center preset? See the " <>
+            "<a href=\"https://github.com/CommunityMaintained/tubeless/wiki/Media-Center-integration\" target=\"_blank\" " <>
+            "class=\"underline decoration-bodydark decoration-1 hover:decoration-white\">Plex and Jellyfin setup guide</a>"
+        }
+        html_help={true}
       >
         <.button
           class="h-13 w-2/5 lg:w-1/5 ml-2 md:ml-4"
@@ -267,6 +273,11 @@
         or marks a folder with <.inline_code>{double_brace("series_root")}</.inline_code>.
       </strong>
       Try the "Media Center" preset if you're not sure. See the template docs below for more on <.inline_code>{double_brace("series_root")}</.inline_code>.
+      For configuring Plex or Jellyfin to consume these files, see the <.subtle_link
+        href="https://github.com/CommunityMaintained/tubeless/wiki/Media-Center-integration"
+        target="_blank"
+      >
+        Media Center integration guide</.subtle_link>.
     </p>
 
     <section
