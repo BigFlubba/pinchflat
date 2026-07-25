@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.4.2](https://github.com/CommunityMaintained/pinchflat/compare/v1.4.1...v1.4.2) (2026-07-25)
+
+
+### Features
+
+* refresh Queue Health on the diagnostics page without a full page reload ([badd815](https://github.com/CommunityMaintained/pinchflat/commit/badd81584bddafdb4b3facdd403c582903a09fc5))
+
+
+### Bug Fixes
+
+* abort container startup when database migration fails ([af68d88](https://github.com/CommunityMaintained/pinchflat/commit/af68d88ec499a3f4f2aaad9307b0e6d24f9a9255))
+* **ci:** move discord notification to release-please workflow ([d595988](https://github.com/CommunityMaintained/pinchflat/commit/d59598859c7c7c8c2d6db70ba80a92fdb2d58aab))
+* fetch sqlean extension when a stale version marker has no binaries ([4f59d91](https://github.com/CommunityMaintained/pinchflat/commit/4f59d91d209b788919aac4b56baaa18d0f77aea0))
+* name episode thumbnails to match the media file so Plex displays them ([75fc592](https://github.com/CommunityMaintained/pinchflat/commit/75fc592d3a90306cee4ba82674c809a084585d3d))
+
+
+### Chores
+
+* **ci:** lint GHA workflow ([00a6550](https://github.com/CommunityMaintained/pinchflat/commit/00a65501e44ceb3af9e603bc44e11919e79b6489))
+
 ## [1.4.1](https://github.com/CommunityMaintained/pinchflat/compare/v1.4.0...v1.4.1) (2026-07-17)
 
 
