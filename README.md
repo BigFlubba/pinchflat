@@ -3,7 +3,7 @@
 >
 > Review the options below and carefully chose your own adventure.
 >
-> This is a community-maintained fork of [kieraneglin/pinchflat](https://github.com/kieraneglin/pinchflat). The original project is not actively maintained; this fork exists to continue development and apply community contributions. See [Migrating from kieraneglin/pinchflat](#migrating-from-kieraneglinpinchflat). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Discord Server [created](https://discord.gg/7jdBJGCrq)!
+> This is a community-maintained fork of [kieraneglin/pinchflat](https://github.com/kieraneglin/pinchflat). The original project is not actively maintained; this fork exists to continue development and apply community contributions. See [Migrating from kieraneglin/pinchflat](#migrating-from-kieraneglinpinchflat). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Discord Server [created](https://discord.gg/V7grTVkc37)!
 
 <p align="center">
   <img
@@ -30,7 +30,7 @@
 <div align="center">
 
 [![](https://img.shields.io/github/v/release/CommunityMaintained/pinchflat?style=for-the-badge&color=purple)](https://github.com/CommunityMaintained/pinchflat/releases)
-[![](https://img.shields.io/static/v1?style=for-the-badge&logo=discord&message=Chat&color=5865F2&label=Discord)](https://discord.gg/7jdBJGCrq)
+[![](https://img.shields.io/static/v1?style=for-the-badge&logo=discord&message=Chat&color=5865F2&label=Discord)](https://discord.gg/V7grTVkc37)
 [![](https://img.shields.io/github/actions/workflow/status/CommunityMaintained/pinchflat/release-please.yml?style=for-the-badge)](https://github.com/CommunityMaintained/pinchflat/actions/workflows/release-please.yml)
 [![](https://img.shields.io/github/license/CommunityMaintained/pinchflat?style=for-the-badge&color=ee512b)](LICENSE)
 
