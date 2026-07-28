@@ -1,7 +1,7 @@
 > [!IMPORTANT]
 > Pinchflat vs. Tubeless.
 >
-> Review the options below and carefully chose your own adventure.
+> Review the options below and carefully choose your own adventure.
 >
 > This is a community-maintained fork of [kieraneglin/pinchflat](https://github.com/kieraneglin/pinchflat). The original project is not actively maintained; this fork exists to continue development and apply community contributions. See [Migrating from kieraneglin/pinchflat](#migrating-from-kieraneglinpinchflat). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Discord Server [created](https://discord.gg/V7grTVkc37)!
 
@@ -63,9 +63,9 @@
 
 ## What it does
 
-Pinchflat is a self-hosted app for downloading YouTube content built using [yt-dlp](https://github.com/yt-dlp/yt-dlp). It's designed to be lightweight, self-contained, and easy to use. You set up rules for how to download content from YouTube channels or playlists and it'll do the rest, periodically checking for new content. It's perfect for people who want to download content for use with a media center app (Plex, Jellyfin, Kodi) or for those who want to archive media!
+Pinchflat is a self-hosted app for downloading YouTube content built using [yt-dlp](https://github.com/yt-dlp/yt-dlp). It's designed to be lightweight, self-contained, and easy to use. You set up rules for how to download content from YouTube channels or playlists, and it'll do the rest, periodically checking for new content. It's perfect for people who want to download content for use with a media center app (Plex, Jellyfin, Kodi) or for those who want to archive media!
 
-While you can [download individual videos](https://github.com/CommunityMaintained/pinchflat/wiki/Frequently-Asked-Questions#how-do-i-download-one-off-videos), Pinchflat is best suited for downloading content from channels or playlists. It's also not meant for consuming content in-app - Pinchflat downloads content to disk where you can then watch it with a media center app or VLC.
+While you can [download individual videos](https://github.com/CommunityMaintained/pinchflat/wiki/Frequently-Asked-Questions#how-do-i-download-one-off-videos), Pinchflat is best suited for downloading content from channels or playlists. It's also not meant for consuming content in-app - Pinchflat downloads content to disk, where you can then watch it with a media center app or VLC.
 
 If it doesn't work for your use case, please make a feature request! You can also check out these great alternatives: [Tube Archivist](https://github.com/tubearchivist/tubearchivist), [ytdl-sub](https://github.com/jmbannon/ytdl-sub), and [TubeSync](https://github.com/meeb/tubesync)
 
@@ -129,7 +129,7 @@ services:
 ### Docker
 
 1. Create two directories on your host machine: one for storing config and one for storing downloaded media. Make sure they're both writable by the user running the Docker container.
-2. Prepare the docker image in one of the two ways below:
+2. Prepare the Docker image in one of the two ways below:
    - **From GHCR:** `docker pull ghcr.io/communitymaintained/pinchflat:latest`
      - NOTE: also available on Docker Hub at `communitymaintained/pinchflat:latest`
    - **Building locally:** `docker build . --file docker/selfhosted.Dockerfile -t ghcr.io/communitymaintained/pinchflat:latest`
@@ -149,7 +149,7 @@ docker run \
 
 ### Podman
 
-The Podman setup is similar to Docker but changes a few flags to run under a User Namespace instead of root. To run Pinchflat under Podman and use the current user's UID/GID for file access run this:
+The Podman setup is similar to Docker, but changes a few flags to run under a User Namespace instead of root. To run Pinchflat under Podman and use the current user's UID/GID for file access, run this:
 
 ```
 podman run \
@@ -162,18 +162,18 @@ podman run \
   ghcr.io/communitymaintained/pinchflat:latest
 ```
 
-Using this setup consider creating a new `pinchflat` user and giving that user ownership to the config and download directory. See [Podman --userns](https://docs.podman.io/en/v4.6.1/markdown/options/userns.container.html) docs.
+Using this setup, consider creating a new `pinchflat` user and giving that user ownership of the config and download directory. See [Podman --userns](https://docs.podman.io/en/v4.6.1/markdown/options/userns.container.html) docs.
 
 ### IMPORTANT: File permissions
 
-You _must_ ensure the host directories you've mounted are writable by the user running the Docker container. If you get a permission error follow the steps it suggests. See [upstream #106](https://github.com/kieraneglin/pinchflat/issues/106) for more.
+You _must_ ensure the host directories you've mounted are writable by the user running the Docker container. If you get a permission error, follow the steps it suggests. See [upstream #106](https://github.com/kieraneglin/pinchflat/issues/106) for more.
 
 > [!IMPORTANT]
 > It's not recommended to run the container as root. Doing so can create permission issues if other apps need to work with the downloaded media.
 
 ### ADVANCED: Storing Pinchflat config directory on a network share
 
-As pointed out in [upstream #137](https://github.com/kieraneglin/pinchflat/issues/137), SQLite doesn't like being run in WAL mode on network shares. If you're running Pinchflat on a network share, you can disable WAL mode by setting the `JOURNAL_MODE` environment variable to `delete`. This will make Pinchflat run in rollback journal mode which is less performant but should work on network shares.
+As pointed out in [upstream #137](https://github.com/kieraneglin/pinchflat/issues/137), SQLite doesn't like being run in WAL mode on network shares. If you're running Pinchflat on a network share, you can disable WAL mode by setting the `JOURNAL_MODE` environment variable to `delete`. This will make Pinchflat run in rollback journal mode, which is less performant but should work on network shares.
 
 > [!CAUTION]
 > Changing this setting from WAL to `delete` on an existing Pinchflat instance could, conceivably, result in data loss. Only change this setting if you know what you're doing, why this is important, and are okay with possible data loss or DB corruption. Backup your database first!
@@ -185,7 +185,7 @@ If you change this setting and it works well for you, please open an issue or le
 | Name                        | Required? | Default                        | Notes                                                                                                                                             |
 | --------------------------- | --------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `TZ`                        | No        | `UTC`                          | Must follow IANA TZ format                                                                                                                        |
-| `LOG_LEVEL`                 | No        | `debug`                        | Can be set to `info` but `debug` is strongly recommended                                                                                          |
+| `LOG_LEVEL`                 | No        | `debug`                        | Can be set to `info`, but `debug` is strongly recommended                                                                                          |
 | `UMASK`                     | No        | `022`                          | Unraid users may want to set this to `000`                                                                                                        |
 | `BASIC_AUTH_USERNAME`       | No        |                                | See [authentication docs](https://github.com/CommunityMaintained/pinchflat/wiki/Username-and-Password)                                            |
 | `BASIC_AUTH_PASSWORD`       | No        |                                | See [authentication docs](https://github.com/CommunityMaintained/pinchflat/wiki/Username-and-Password)                                            |
@@ -199,11 +199,11 @@ If you change this setting and it works well for you, please open an issue or le
 
 ### Reverse Proxies
 
-Pinchflat makes heavy use of websockets for real-time updates. If you're running Pinchflat behind a reverse proxy then you'll need to make sure it's configured to support websockets.
+Pinchflat makes heavy use of websockets for real-time updates. If you're running Pinchflat behind a reverse proxy, then you'll need to make sure it's configured to support websockets.
 
 #### Caddy Proxy Example
 
-To configure Pinchflat behind Caddy set the `BASE_ROUTE_PATH` environment variable to `/pinchflat/` then add a stanza like this to the `Caddyfile`:
+To configure Pinchflat behind Caddy, set the `BASE_ROUTE_PATH` environment variable to `/pinchflat/` then add a stanza like this to the `Caddyfile`:
 
 ```caddyfile
 home.example.com:443 {
@@ -229,7 +229,7 @@ Stop the old container, update the image reference, and start it again. Your `/c
 
 ### Returning to kieraneglin/pinchflat
 
-You can switch back to upstream (Kieran's image) at any time by simply pointing the image to `ghcr.io/kieraneglin/pinchflat:latest`. If you wish to make a 100% clean return, run the one-off command below **first**. It removes all traces of this for from the Pinchflat's database.
+You can switch back to upstream (Kieran's image) at any time by simply pointing the image to `ghcr.io/kieraneglin/pinchflat:latest`. If you wish to make a 100% clean return, run the one-off command below **first**. It removes all traces of this from the Pinchflat's database.
 
 ```bash
 docker compose run --rm pinchflat bin/pinchflat eval "Pinchflat.Release.prep_for_upstream()"
@@ -243,7 +243,7 @@ The command drops the fork-only DB columns, removes their migration records so t
 
 ## Stability disclaimer
 
-This software is in active development and anything can break at any time. I make no guarantees about the stability of this software, forward-compatibility of updates, or integrity (both related to and independent of Pinchflat).
+This software is in active development, and anything can break at any time. I make no guarantees about the stability of this software, forward-compatibility of updates, or integrity (both related to and independent of Pinchflat).
 
 ## Legal Use & Disclaimer
 
