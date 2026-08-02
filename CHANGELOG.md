@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.4.3](https://github.com/CommunityMaintained/pinchflat/compare/v1.4.2...v1.4.3) (2026-08-02)
+
+
+### Bug Fixes
+
+* **backport:** db connection improvements ([1f6248c](https://github.com/CommunityMaintained/pinchflat/commit/1f6248cca00c599ebe5f99581e0f2b1a7e87d20a))
+
+
+### Chores
+
+* **deps:** bump ci-base to 009cccb ([e90ef10](https://github.com/CommunityMaintained/pinchflat/commit/e90ef107d9332dd3ee91950450943acb483af32e))
+* **deps:** bump ffmpeg ([125ba62](https://github.com/CommunityMaintained/pinchflat/commit/125ba62cacfd23ed9e717c247f951ce8e4d70622))
+* **deps:** refresh elixir dependencies ([fdc5482](https://github.com/CommunityMaintained/pinchflat/commit/fdc54820a8f7fe577fcb076c9fb6453568946fea))
+* **deps:** update dependency prettier to v3.9.6 ([e458dee](https://github.com/CommunityMaintained/pinchflat/commit/e458dee4cd667b67f5ad851c30516dacfe35c09f))
+* **deps:** update erlang-otp docker tag to v28.5.0.4 ([b5c0e8e](https://github.com/CommunityMaintained/pinchflat/commit/b5c0e8ee8e4c6a750741b972018291859538dc20))
+* **deps:** update github actions ([8981b99](https://github.com/CommunityMaintained/pinchflat/commit/8981b99ccd8a3a96753b50670672115185106d0c))
+
+
+### Documentation
+
+* Convert to issue forms ([e07c9c2](https://github.com/CommunityMaintained/pinchflat/commit/e07c9c22e60803a3e7ab58c8d24c34cac2238969))
+* Fix grammatical error in pull request template ([d3538bf](https://github.com/CommunityMaintained/pinchflat/commit/d3538bf0031da12a691f512d45c52f50423cfb87))
+* Fix grammatical issues in README.md ([f27735f](https://github.com/CommunityMaintained/pinchflat/commit/f27735f572ca74c76dc24b315f179e16c13c361f))
+* Improve README environment variables section ([8bca049](https://github.com/CommunityMaintained/pinchflat/commit/8bca049a97d2fe59c81f80e134cb30e885e6525d))
+* Update Discord server link in README to a permant invite pointing to #welcome channel ([2b19d8d](https://github.com/CommunityMaintained/pinchflat/commit/2b19d8dc85b77d7b9dd04454e206a7399947afca))
+* Update Discord webhook avatar URL to GitHub logo ([36c8a36](https://github.com/CommunityMaintained/pinchflat/commit/36c8a360035fae17e294d784a0eb4b123d44b6fd))
+* Update Discord webhook mention role id ([29b6b85](https://github.com/CommunityMaintained/pinchflat/commit/29b6b856d4d02d5e3e8219a13d3640648f846e80))
+* Update pull request template with critical issues note ([416c9a0](https://github.com/CommunityMaintained/pinchflat/commit/416c9a063bf0a4c420a8e58011bd705c6111b191))
+
 ## [1.4.2](https://github.com/CommunityMaintained/pinchflat/compare/v1.4.1...v1.4.2) (2026-07-25)
 
 
